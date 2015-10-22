@@ -45,7 +45,7 @@ PELICAN_SOBER_ABOUT = "Web architecture, automation, python, nodejs, data scienc
 PELICAN_SOBER_HEADER_LINKS = [("CV", "cv.fr.pdf")]
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {
