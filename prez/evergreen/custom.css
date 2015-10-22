@@ -1,0 +1,14 @@
+/* Hide input cells */
+div.slides > section div.input {
+    display: none;
+}
+
+div.slides > section div.text_cell_render > ul > li,
+div.slides > section div.text_cell_render > ol > li {
+    margin: 0.7em 0;
+}
+
+div.slides > section div.text_cell_render > ul > li:first-child,
+div.slides > section div.text_cell_render > ol > li:first-child {
+    margin: 0;
+}
