@@ -1,4 +1,6 @@
 __pycache__
 *.pid
 *.pyc
-output/
+.ipynb_checkpoints
+output/*
+!output/prez

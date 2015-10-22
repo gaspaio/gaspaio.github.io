@@ -1,0 +1,17 @@
+.reveal div > ol > li,
+.reveal div > ul > li {
+    margin-bottom: 1em ;
+}
+
+.reveal li li {
+    margin: 0.5em 0;
+}
+
+.reveal blockquote {
+    background-color: #DDDDDD;
+    text-align: center;
+}
+
+.reveal section img {
+    margin: 15px auto;
+}

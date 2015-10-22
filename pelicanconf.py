@@ -50,8 +50,10 @@ PELICAN_SOBER_HEADER_LINKS = [("CV", "cv.fr.pdf")]
 STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
-    'extra/cv.fr.pdf': {'path': 'cv.fr.pdf'}
+    'extra/cv.fr.pdf': {'path': 'cv.fr.pdf'},
 }
+
+OUTPUT_RETENTION = ['prez']
 
 PLUGIN_PATHS = ["pelican-plugins"]
 PLUGINS = ["render_math"]
