@@ -1,7 +1,9 @@
-Title: Investigating France's elections against gross domestic product
+Title: presidents Vs the GDP
 Status: published
+Date: 2015-10-22 15:00
 Category: Data science
 Slug: pib-elections
+
 Summary: Finding the correlation between GDP evolution and presidential election results
 
 I've recently been doing some reading on forecasting electoral results, and I came accross an article from [Libération](http://liberation.fr) about vote functions applied to the 2002 french presidential elections. Yes, the same elections that ended up with an extreme-right party leader on the second round.
