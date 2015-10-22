@@ -10,11 +10,11 @@
 
 
 
-	<link rel="stylesheet" href="http://rripado.fr/theme/css/main.css" type="text/css" />
+	<link rel="stylesheet" href="http://gaspaio.github.io/theme/css/main.css" type="text/css" />
 
 
 
-    <link href="http://rripado.fr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Gaspaio (a.k.a. Rodolfo Ripado) Atom Feed" />
+    <link href="http://gaspaio.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Gaspaio (a.k.a. Rodolfo Ripado) Atom Feed" />
 </head>
 
 <body>
@@ -23,13 +23,13 @@
 
 	  <header role="banner">
 	    <div class="feeds">
-	      <a href="http://rripado.fr/feeds/all.atom.xml" rel="alternate"><img src="http://rripado.fr/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
+	      <a href="http://gaspaio.github.io/feeds/all.atom.xml" rel="alternate"><img src="http://gaspaio.github.io/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
 	    </div>
 	      <nav class="pages">
-			  	<a href="http://rripado.fr/pages/about-me.html">About me</a>
-			  	<a href="http://rripado.fr/cv.fr.pdf" target="_blank">CV</a>
+			  	<a href="http://gaspaio.github.io/pages/about-me.html">About me</a>
+			  	<a href="http://gaspaio.github.io/cv.fr.pdf" target="_blank">CV</a>
 	      </nav>
-		<a href="http://rripado.fr" class="title">Gaspaio (a.k.a. Rodolfo Ripado)</a>
+		<a href="http://gaspaio.github.io" class="title">Gaspaio (a.k.a. Rodolfo Ripado)</a>
       </header>
 
 	  <div class="wrapper">
@@ -42,25 +42,25 @@
 <div class="metadata">
   <time datetime="2015-10-22T13:14:07+02:00" pubdate>Thu 22 October 2015</time>
     <address class="vcard author">
-      by <a class="url fn" href="http://rripado.fr/author/rodolfo-ripado.html">Rodolfo Ripado</a>
+      by <a class="url fn" href="http://gaspaio.github.io/author/rodolfo-ripado.html">Rodolfo Ripado</a>
     </address>
-  in <a href="http://rripado.fr/category/data-science.html">Data science</a>
+  in <a href="http://gaspaio.github.io/category/data-science.html">Data science</a>
 </div>		
 		<p>I've recently been doing some reading on forecasting electoral results, and I came accross an article from <a href="http://liberation.fr">Libération</a> about vote functions applied to the 2002 french presidential elections. Yes, the same elections that ended up with an extreme-right party leader on the second round.</p>
 <p>The article, " <a href="http://www.liberation.fr/tribune/2002/03/21/pour-l-iowa-avantage-jospin_397638">Pour l'Iowa, avantage Jospin</a> ", was written by Michael S. Lewis-Beck and Christine Fauvelle-Aymar, two economists working on the Iowa forcasting algorithms back in the late 90's. The basic idea of those algorithms was using economic and political results to predict voting behaviours. In their Libération article, they apply some simple vote functions to try to predict the 2002 results.</p>
 <p>Anyway, early in the article they write that the correlation between the economic situation in France and presidential election results is around 0.7. I set off to try to reproduce these results. You can <a href="http://nbviewer.ipython.org/github/gaspaio/notebooks/blob/master/elections/PIB.ipynb">view the detailed notebook</a>, but here's a short version.</p>
 <p>The gross domestic product (PIB in french) is an easy indicator of the economic health of the country. <a href="http://www.bdm.insee.fr/bdm2/affichageSeries?idbank=001690224&amp;codeGroupe=1540">The official numbers from INSEE</a> are released quarterly :</p>
-<p><img alt="GDP in France since 1958" src="http://rripado.fr/images/pib_pib.png" /></p>
+<p><img alt="GDP in France since 1958" src="http://gaspaio.github.io/images/pib_pib.png" /></p>
 <p>To measure the economic situation of the country at a given time, we can take diffs and look at the PIB variations over time :</p>
-<p><img alt="GDP in France since 1958" src="http://rripado.fr/images/pib_evol.png" /></p>
+<p><img alt="GDP in France since 1958" src="http://gaspaio.github.io/images/pib_evol.png" /></p>
 <p>Predictive models that use economic information to forecast election results are based on the hypothesis that a given political color tends to be reelected if all goes well, economy-wise, and vice-versa. So, in theory, elections where there is a presidential color switch should be immediately preceded by periods where PIB variation is negative.</p>
 <p>After collecting the relevant election dates and results :</p>
-<p><img alt="GDP in France and Presidential elections" src="http://rripado.fr/images/pib_evol_pres.png" /></p>
+<p><img alt="GDP in France and Presidential elections" src="http://gaspaio.github.io/images/pib_evol_pres.png" /></p>
 <p>The blues area is the time where a France had a right wing president (from De Gaule to Sarkozy), and the pink areas indicates a left wing president (from Mitterrand to Holand). The white vertical lines are election dates.</p>
 <p>The <strong>Point-biserial correlation coefficient</strong> between PIB evolution sign and presidential color switches is : <span class="math">\(r_{pb} = -0.45\)</span>.</p>
 <p>So, indeed, correlation is negative : when PIB goes down, presidents tend to be ejected. This fact explains 45% of the variance in presidential election results.</p>
 <p>We can scatter-plot this relationship :</p>
-<p><img alt="GDP in France and Presidential elections" src="http://rripado.fr/images/pib_evol_pres_scat.png" /></p>
+<p><img alt="GDP in France and Presidential elections" src="http://gaspaio.github.io/images/pib_evol_pres_scat.png" /></p>
 <p>Clearly, most elections with a negative of low PIB variation resulted in a presidential colour switch. On the other hand, the result if highly biased by what is called the "Trente glorieuses" (the thirty glorious years). From 1945 to 1975, french economy grew considerably (PIB variation &gt; 1% per quarter), with a stable right-wing gouvernment until the early eighties. This kind of growth is not likelly to come back anytime soon, so one should storngly question the predictive power of my little investigation.</p>
 <p>I still would like to known where Lewis-Beck and Christine Fauvelle-Aymar got the 70% correlation between economy and presidential election behaviour.</p>
 <p><strong>Resources :</strong></p>
@@ -149,7 +149,7 @@
   	          <nav>
 	            <h2>Categories</h2>
 	            <ul>
-	                <li class="active"><a href="http://rripado.fr/category/data-science.html">Data science</a></li>
+	                <li class="active"><a href="http://gaspaio.github.io/category/data-science.html">Data science</a></li>
 	            </ul>
 	          </nav>
 
