@@ -14,7 +14,7 @@ Colors :
 @import url("pygment.css");
 
 
-/* Latout */
+/* Layout */
 
 article,
 figcaption,
@@ -184,6 +184,10 @@ hr {
   border-radius: 5px;
 }
 
+strong,
+strong > a {
+  color: #A70C1D;
+}
 
 /* Article */
 
