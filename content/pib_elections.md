@@ -1,4 +1,4 @@
-Title: presidents Vs the GDP
+Title: Presidents Vs the GDP
 Status: published
 Date: 2015-10-22 15:00
 Category: Data science
@@ -43,4 +43,4 @@ I still would like to known where Lewis-Beck and Christine Fauvelle-Aymar got th
 **Resources :**
 
 * [IPython Notebook](http://nbviewer.ipython.org/github/gaspaio/notebooks/blob/master/elections/PIB.ipynb)
-* [IPython Notebook sources](https://github.com/gaspaio/notebooks/tree/master/elections)
+* [IPython Notebook source](https://github.com/gaspaio/notebooks/tree/master/elections)
