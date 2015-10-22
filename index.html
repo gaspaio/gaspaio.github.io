@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="utf-8"/>
+	<title>rripado.fr</title>
+	<meta name="author" content="Rodolfo Ripado">
+
+
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+	      <nav class="pages">
+			  	<a href="/pages/about-me.html">About me</a>
+			  	<a href="/extra/cv.fr.pdf" target="_blank">CV</a>
+	      </nav>
+		<a href="" class="title">rripado.fr</a>
+      </header>
+
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+
+
+
+      <article>
+        <h1><a href="/pib-elections.html">Investigating France's elections against gross domestic product</a></h1>
+        <p>I've recently been doing some reading on forecasting electoral results, and I came accross an article from <a href="http://liberation.fr">Libération</a> about vote functions applied to the 2002 french presidential elections. Yes, the same elections that ended up with an extreme-right party leader on the second round.</p>
+<p>The article, " <a href="http://www.liberation.fr/tribune/2002/03/21/pour-l-iowa-avantage-jospin_397638">Pour l'Iowa, avantage Jospin</a> ", was written by Michael S. Lewis-Beck and Christine Fauvelle-Aymar, two economists working on the Iowa forcasting algorithms back in the late 90's. The basic idea of those algorithms was using economic and political results to predict voting behaviours. In their Libération article, they apply some simple vote functions to try to predict the 2002 results.</p>
+<p>Anyway, early in the article they write that the correlation between the economic situation in France and presidential election results is around 0.7. I set off to try to reproduce these results. You can <a href="http://nbviewer.ipython.org/github/gaspaio/notebooks/blob/master/elections/PIB.ipynb">view the detailed notebook</a>, but here's a short version.</p>
+<p>The gross domestic product (PIB in french) is an easy indicator of the economic health of the country. <a href="http://www.bdm.insee.fr/bdm2/affichageSeries?idbank=001690224&amp;codeGroupe=1540">The official numbers from INSEE</a> are released quarterly :</p>
+<p><img alt="GDP in France since 1958" src="/images/pib_pib.png" /></p>
+<p>To measure the economic situation of the country at a given time, we can take diffs and look at the PIB variations over time :</p>
+<p><img alt="GDP in France since 1958" src="/images/pib_evol.png" /></p>
+<p>Predictive models that use economic information to forecast election results are based on the hypothesis that a given political color tends to be reelected if all goes well, economy-wise, and vice-versa. So, in theory, elections where there is a presidential color switch should be immediately preceded by periods where PIB variation is negative.</p>
+<p>After collecting the relevant election dates and results :</p>
+<p><img alt="GDP in France and Presidential elections" src="/images/pib_evol_pres.png" /></p>
+<p>The blues area is the time where a France had a right wing president (from De Gaule to Sarkozy), and the pink areas indicates a left wing president (from Mitterrand to Holand). The white vertical lines are election dates.</p>
+<p>The <strong>Point-biserial correlation coefficient</strong> between PIB evolution sign and presidential color switches is : <span class="math">\(r_{pb} = -0.45\)</span>.</p>
+<p>So, indeed, correlation is negative : when PIB goes down, presidents tend to be ejected. This fact explains 45% of the variance in presidential election results.</p>
+<p>We can scatter-plot this relationship :</p>
+<p><img alt="GDP in France and Presidential elections" src="/images/pib_evol_pres_scat.png" /></p>
+<p>Clearly, most elections with a negative of low PIB variation resulted in a presidential colour switch. On the other hand, the result if highly biased by what is called the "Trente glorieuses" (the thirty glorious years). From 1945 to 1975, french economy grew considerably (PIB variation &gt; 1% per quarter), with a stable right-wing gouvernment until the early eighties. This kind of growth is not likelly to come back anytime soon, so one should storngly question the predictive power of my little investigation.</p>
+<p>I still would like to known where Lewis-Beck and Christine Fauvelle-Aymar got the 70% correlation between economy and presidential election behaviour.</p>
+<p><strong>Resources :</strong></p>
+<ul>
+<li><a href="http://nbviewer.ipython.org/github/gaspaio/notebooks/blob/master/elections/PIB.ipynb">IPython Notebook</a></li>
+<li><a href="https://github.com/gaspaio/notebooks/tree/master/elections">IPython Notebook sources</a></li>
+</ul>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+      </article>
+
+      <hr />
+
+    
+
+
+
+		  </div>
+
+		  <div class="sidebar">
+		    <div class="sidebar-container" >
+
+	            <aside>
+	              <h2>Me</h2>
+			      <p>
+                    Web architecture, automation, python, nodejs, data science, machine learning.
+			      </p>
+			    </aside>
+
+  	          <nav>
+	            <h2>Categories</h2>
+	            <ul>
+	                <li ><a href="/category/data-science.html">Data science</a></li>
+	            </ul>
+	          </nav>
+
+	            <aside>
+	            <h2>Social</h2>
+			      <ul class="social">
+				    <li><a href="http://www.linkedin.com/in/rodolforipado">LinkedIn</a><i></i></li>
+				    <li><a href="https://github.com/gaspaio">Github</a><i></i></li>
+			      </ul>
+			    </aside>
+
+	        </div>
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  Rodolfo Ripado - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
+    	</p>
+
+	  </footer>
+
+	</div>
+
+
+</body>
+</html>
