@@ -1,0 +1,6 @@
+[submodule "themes/pelican-sober"]
+	path = themes/pelican-sober
+	url = git@github.com:gaspaio/pelican-sober.git
+[submodule "pelican-plugins"]
+	path = pelican-plugins
+	url = git@github.com:getpelican/pelican-plugins.git
