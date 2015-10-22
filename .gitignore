@@ -1,0 +1,4 @@
+themes/
+pelican-plugins/
+__PYCACHE__/
+*.pid
