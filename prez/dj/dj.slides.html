@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Machine Learning Meetup: Data-journalisme</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/gaspaio.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="cover">
+					<h1>Machine Learning Meetup</h1>
+					<h3>Hors-Série #1: Data-journalisme</h3>
+				</section>
+
+				<section>
+					<h1>Machine Learning</h1>
+					<h3 class="spacer">Kesako&nbsp;?</h3>
+					<ul>
+						<li>Discipline qui traite de systèmes capables d'apprendre à partir de données</li>
+						<li class="fragment">Plus précisément, il s'agit de logiciels qui:<br>
+					&nbsp;&nbsp;- pour réaliser une tâche donnée<br>
+					&nbsp;&nbsp;- analysent l'expérience passée<br>
+					&nbsp;&nbsp;- de manière à devenir plus performants dans le temps (avec de plus en plus de données)
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">Exemples classiques</h1>
+					<ul>
+						<li class="fragment">Classification de mails en SPAM/HAM</li>
+						<li class="fragment">Reconnaissance d'images (adresses manuscrites, chiens/chats, etc.)</li>
+						<li class="fragment">Prédiction de comportements utilisateurs, de résultats électoraux, ...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">Le <em>Machine Learning</em> est ...</h1>
+					<ul>
+						<li class="fragment">Fortement liée à la statistique (buzzword: <em>Data Science</em>)</li>
+						<li class="fragment">Fortement liée à l'intelligence artificielle</li>
+						<li class="fragment">Très pertinente aujourd'hui<br>(beaucoup de données, CPU-power pas cher)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Data-journalisme</h1>
+					<h3 class="spacer">Kesako&nbsp;?</h3>
+					<p class="fragment"><strong>Selon Wikipédia</strong>:<br>
+					Le journalisme de données (<em>data journalism</em> en anglais) [...] est un mouvement visant à renouveler le journalisme par l'exploitation et la mise à la disposition du public de données statistiques</p>
+					<p class="fragment">
+						<strong>Le "Manifeste" du datajournalisme (2006)</strong>: 
+						<a href="http://www.holovaty.com/writing/fundamental-change/">A fundamental way newspaper sites need to change</a>
+					</p>
+				</section>
+
+				<section>
+					<h1 class="spacer">A quoi sert le data-journalisme&nbsp;?</h1>
+					<ul>
+						<li class="fragment">Augmentation du domaine journalistique aux données brutes</li>
+						<li class="fragment">Introduire une certaine scientificité dans les traitements journalistiques des données</li>
+						<li class="fragment">Mise à disposition des données utilisées au grand public</li>
+						<li class="fragment">Proposer une meilleure compréhesion des données et du monde via des visualisations novatrices (buzzword: dataviz)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">Présentations</h1>
+					<ol>
+						<li class="fragment">What is a computational biologist doing at the New York Times?<br>
+						<strong>Chris Wiggins</strong>, Chief Data Scientist au New York Times
+						</li>
+						<li class="fragment">Articuler éditorialisation algorithmique et humaine<br>
+						<strong>Nicolas Sauret</strong> (Centre Pompidou), <strong>Bertrand Delezoide</strong> (CEA)
+						</li>
+						<li class="fragment">Dataveyes: Human data interactions<br>
+						<strong>François-Xavier Fringant</strong>, co-fondateur
+						</li>						
+						<li class="fragment">Syllabs: Analyse sémantique &amp; création de contenus textuels<br>
+						<strong>Claude de Loupy</strong>, co-fondateur
+						</li>
+					</ol>
+				</section>
+
+
+				<section>
+					<h1 class="spacer">What is a computational biologist doing at the New York Times&nbsp;?</h1>
+					<h3>and what can academia do for a 163-year old company?</h3>
+					<p>Chris Wiggins, Chief Data Scientist au New York Times<p>
+				</section>
+
+				<section>
+					<h1 class="spacer">Chris Wiggins (@chriswiggins)</h1>
+					<ul>
+						<li>Chercheur universitaire dans le domaine de la bioinformatique</li>
+						<li>Mène de nombreuses initiatives d'utilisation de données disponibles publiquement</li>
+						<li>Embauché récemment par le NYT pour mener une équipe de 5 <em>Data Scientists</em></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">Pourquoi de la <em>Data Science</em> au NYT&nbsp;?</h1>
+					<ul>
+						<li class="fragment">Rendre accessibles et compréhensibles les données produites par le NYT</li>
+						<li class="fragment">Extraire de la connaissance de ces données, scientifiquement</li>
+						<li class="fragment">Promovoir des critères de décision quantifiables, plutôt que basés sur l'intuition</li>
+					</ul>
+					<p class="fragment">Le but: <em>Listen to its readers at web scale</em></p>
+					<p class="fragment"><em>What we're aiming to do is to try to inform product and marketing decisions, as well as potentially newsroom decisions.</em></p>
+				</section>
+
+
+				<section>
+					<h1 class="spacer">Mais que font-ils&nbsp;?</h1>
+					<ul>
+						<li class="fragment"><a target="_blank" href="http://www.nytimes.com/newsgraphics/2013/12/30/year-in-interactive-storytelling/#dataviz">Liste de data visualisations au NYT</a></li>
+						<li class="fragment"><a target="_blank" href="http://developer.nytimes.com/">Les data APIs du NYT</a></li>
+						<li class="fragment">Newsroom analytics: s'assurer que le <strong>bon journalisme</strong> a le plus de lecteurs possible</li>
+						<!-- Ex: test sur les titres - quel titre pour quel support ?, comment faire des titres qui marchent ? -->
+						<!-- Et donc: comment seconder l'intuition journalistique de données statistiques (bien un sujet de ML) -->
+						<li class="fragment">Comprendre et prédire l'"engagement" des lecteurs, leur comportement</li>
+						<!-- probabilité de désabonnement, etc -->
+						<li class="fragment">Étude scientifique des jeux de données utilisés par les l'équipes du NYT (journalistes, marketing, ...)</li>
+					</ul>
+					<p class="fragment">à lire: 
+					<a href="http://www.fastcompany.com/3033254/most-creative-people/new-york-times-chief-data-scientist-chris-wiggins-on-the-way-we-create-">
+					NYT chief data scientist Chris Wiggins on the way we create and consume content now
+					</a></p>
+				</section>
+
+				<section>
+					<h1 class="spacer">Les pré-requis de la <em>data science</em></h1>
+					<ul>
+						<li class="fragment">Pratiques scientifiques: méthodes, outils mathématiques, etc</li>
+						<li class="fragment">Compétences techniques: <em>engineering before science</em></li>
+						<li class="fragment">Culture: promouvoir les concepts, les méthodes et le scepticisme propre à la science</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h1>Datamining et Dataviz chez Médiapart</h1>
+					<h3>Nicolas Sauret (Centre Pompidou), Bertrand Delezoide (CEA)</h3>
+				</section>
+
+				<section>
+					<h1>Periplus</h1>
+					<h3 class="spacer">Articuler éditorialisation algorithmique et humaine</h3>
+					<ul>
+						<li class="fragment">Project INR (24 mois) de valorisation des archives de Médiapart</li>
+						<li class="fragment">Extraction de données à partir de documents multimédias (non-structurés)</li>
+						<li class="fragment">Clustering automatisé des archives multimédias</li>
+						<li class="fragment">Indexation, synthèse de contenus multimédias</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">Streamgraph</h1>
+					<h3 class="spacer">Visualiser le volume d’un cluster éditorial dans le temps</h3>
+					<p><img width="100%" src="./images/streamgraph.png" alt="Streamgraph"></p>
+				</section>
+
+				<section>
+					<h1 class="spacer">Treemap</h1>
+					<h3 class="spacer">Visualiser l'ensemble des clusters à un instant <em>t</em></h3>
+					<p><img width="100%" src="./images/tree.png" alt="Tree"></p>
+				</section>
+
+				<section>
+					<h1 class="spacer">Page des Archives</h1>
+					<p><img width="100%" src="./images/page_mediapart.png" alt="Archives"></p>
+				</section>
+
+				<section>
+					<h1>Dataveyes: présentation d'une start-up de dataviz</h1>
+					<h3>François-Xavier Fringant, co-fondateur</h3>
+				</section>
+
+				<!-- dataviz: kesako -> understand, narration, experience, ... -->
+				<!-- Quelques projets autour de données éditoriales -->
+
+				<section>
+					<h1>Actualité du jeu vidéo en temps réel</h1>
+					<h3><a target="_blank" href="http://dataveyes.com/#!/en/case-studies/actualites">Vidéo</a></h3>
+				</section>
+
+				<section>
+					<h1>Coupe du monde 2014&nbsp;: Visualisation du match France-Suisse en temps réel</h1>
+					<h3><a target="_blank" href="http://dataveyes.com/#!/en/projects/twitter">Vidéo</a></h3>
+				</section>
+
+
+
+				<section>
+					<h1>Syllabs: Analyse sémantique &amp; création de contenus textuels</h1>
+					<h3>Claude de Loupy, co-fondateur</h3>
+				</section>
+
+				<section>
+					<h1 class="spacer">SAAS: Semantic as a service</h1>
+					<ol>
+						<li class="fragment">Collecter - twitter, RSS, web mining</li>
+						<li class="fragment">Analyser - classification, structuration</li>
+						<li class="fragment">Générér - Production algorythmique de tests de qualité humaine</li>
+					</ol>
+				</section>
+
+				<section>
+					<h1>Exemples: e-tourisme</h1>
+					<h3>Génération de descriptions touristiques</h3>
+					<p class="longtext fragment">L'hôtel Oceania vous accueille dans son
+établissement design 4 étoiles. Situé en plein cœur de
+Paris, cet hôtel se trouve à 200 m du parc des
+expositions et à 3km de la gare. L'hôtel, récemment
+rénové, est décoré avec goût et bénéficie d'une
+décoration contemporaine et moderne. Il a une
+capacité de 250 chambres toutes confortables,
+luxueuses, contemporaines avec une décoration haut
+de gamme. Elles sont climatisées, insonorisées et
+disposent toutes d'un balcon, idéal pour prendre l'air
+ou pour observer la vue. Pour rester en contact avec
+vos proches, un accès gratuit à internet est disponible.
+Si vous avez plutôt besoin de vous dégourdir les
+jambes, faites une petite balade dans le jardin de
+l'hôtel qui recouvre une superficie de 700 m2. D'autres
+possibilités vous sont aussi proposées.. [...]. Cet hôtel
+est un excellent choix pour la clientèle business ou
+bien pour les touristes. Pour vos déplacements, un
+service de navette est proposé. Une navette peut
+aussi vous déposer ou aller vous chercher à
+l'aéroport.</p>
+				</section>
+
+				<section>
+					<h1>Exemples: e-commerce</h1>
+					<h3>Génération de descriptions de produits</h3>
+					<p class="longtext fragment">Le modèle décrit ici est un réfrigérateur NO FROST commercialisé par les équipes
+Samsung. Ce réfrigérateur comporte un réfrigérateur et un congélateur. Pour aménager de
+façon plus pratique, ce réfrigérateur est en Pose Libre. Pour une ambiance classique, ce
+réfrigérateur blanc conviendra très bien. Le congélateur est à gauche. Le réfrigérateur utilise
+425 kWh par an. Concernant la congélation, la capacité est de 12 kilos/jour. Ce réfrigérateur
+dispose d'une contenance de 512L dont 158 litres alloués à la partie congélateur. Cet
+appareil, de classe A+, consomme en moyenne 10% d'électricité en moins par rapport à
+un appareil de classe A. De classe climatique SN-T, il doit être dans une pièce possédant
+une fourchette de température allant de 10 à 43°C. Il dispose d'une autonomie de 12
+heures pendant lesquelles vos aliments frais et surgelés seront conservés en toute sécurité.
+Grâce à son distributeur automatique, vous pourrez vous désaltérer quand vous le souhaitez
+! Ce réfrigérateur est large de 91.2 centimètres, haut de 178.9 centimètres et profond de
+73.4 cm et son poids est de 116 kilos.</p>
+				</section>
+
+				<section>
+					<h1 class="spacer">Autres applications</h1>
+<!-- 					<h3>Génération de textes à partir de données brutes</h3> -->
+					<ul>
+						<li class="fragment">Entreprises: Rapports financiers</li>
+						<li class="fragment">Médias: Fiches éditorialisés (Communes, Entreprises, Personnalités)</li>
+						<li class="fragment">Médias (cont.): Dépêches, Alertes, Mailings personnalisés</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">Le secteur</h1>
+					<ul>
+						<li class="fragment"><a href="http://www.narrativescience.com/">Narrative Science</a> - La référence en "Narrative Analytics"</li>
+						<li class="fragment"><a href="http://www.slate.com/blogs/future_tense/2014/03/17/quakebot_los_angeles_times_robot_journalist_writes_article_on_la_earthquake.html">Quakebot</a> - Alertes automatisées de tremblements de terre</li>
+						<li class="fragment"><a href="http://automatedinsights.com/wordsmith/">Wordsmith</a> - Génération de rapports d'entreprise à partir de chiffres bruts</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">L'intox</h1>
+					<img class="fragment" src="./images/robots.png" width="100%">
+				</section>
+
+				<section>
+					<img src="./images/terminator.jpg" width="100%">
+				</section>
+				<!-- Terminator -->
+
+				<section>
+					<h1 class="spacer">La désintox</h1>
+					<h3>OUI ! Les "robots" :</h3>
+					<ul>
+						<li class="fragment">Peuvent écrire des textes standardisés, de qualité HUMAINE</li>
+						<li class="fragment">Sont déjà en train d'éditorialiser des données brutes dans certains secteurs</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="spacer">La désintox</h1>
+					<h3>NON ! Les "robots" ne peuvent pas:</h3>
+					<ul>
+						<li class="fragment">Faire des analyses de discours politiques</li>
+						<li class="fragment">Faire du journalisme d'investigation</li>
+						<li class="fragment">Écrire des romans</li>
+					</ul>
+					<p class="fragment">Donc non, <strong>Skynet</strong> n'est pas prête de se réveiller ...</li>
+				</section>
+
+				<section>
+					<h1>Ressources</h1>
+					<ul>
+						<li><a href="http://nuit-blanche.blogspot.fr/p/paris-based-meetups-on-machine-learning.html">Supports des conférences</a></li>
+						<li><a href="http://www.meetup.com/Paris-Machine-learning-applications-group/">Paris Machine Learning Applications Group</a></li>
+						<li><a href="http://www.holovaty.com/writing/fundamental-change/">A fundamental way newspaper sites need to change</a></li>
+						<li><a href="http://datajournalism.stanford.edu/">Journalism in the age of data</a></li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+//					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+//					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
