@@ -16,5 +16,9 @@ Here are the links to the latest ones I've done at Le Monde :
 
     A brief study on the timeline of content at [LeMonde](http://lemonde.fr), to find the *Evergreen* content.
 
+* **[Compte rendu du Meetup Machine Learning 2014 HS#1 : le data-Journalisme](/prez/dj/dj.slides.html)**, nov. 2014
+
+    A brief account of the presentations I saw at a [Machine Learning Meetup in Paris](http://www.meetup.com/paris-machine-learning-applications-group/), early 2014. This was my first contact with [Syllabs](http://www.syllabs.com/), which went on to produce "robot-journalism" at Le Monde during the 2015 elections (cf. [Des robots au « Monde » pendant les élections départementales ? Oui… et non](http://makingof.blog.lemonde.fr/2015/03/23/des-robots-au-monde-pendant-les-elections-departementales-oui-et-non/)).
+
 Quite a few older ones are available on slideshare : [My Profile on Slideshare](http://www.slideshare.net/rodolforipado)
 
