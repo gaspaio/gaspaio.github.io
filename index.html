@@ -1,178 +1,95 @@
 <!doctype html>
 <html lang="">
 <head>
-	<meta charset="utf-8"/>
-	<title>Gaspaio (a.k.a. Rodolfo Ripado)</title>
-	<meta name="author" content="Rodolfo Ripado">
-
-
-	<link rel="stylesheet" href="http://gaspaio.github.io/theme/css/main.css" type="text/css" />
-
-
-
-    <link href="http://gaspaio.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Gaspaio (a.k.a. Rodolfo Ripado) Atom Feed" />
+    <meta charset="utf-8"/>
+    <title>Rodolfo Ripado (a.k.a. Gaspaio)</title>
+    <meta name="author" content="Rodolfo Ripado" />
+    <meta name="description" content="Experienced tech lead & architect, data-science aficionado" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
 </head>
 
 <body>
-
     <div class="container">
+        <div class="row row-header">
+            <div class="col-md-12">
+                <h1>Rodolfo Ripado</h1>
+                <h3>experienced web architect & tech lead</h3>
+                <h3>data science aficionado</h3>
+            </div>
+        </div>
 
-	  <header role="banner">
-	    <div class="feeds">
-	      <a href="http://gaspaio.github.io/feeds/all.atom.xml" rel="alternate"><img src="http://gaspaio.github.io/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
-	    </div>
-	      <nav class="pages">
-			  	<a href="http://gaspaio.github.io/pages/about-me.html">About me</a>
-			  	<a href="http://gaspaio.github.io/pages/presentations.html">Presentations</a>
-			  	<a href="http://gaspaio.github.io/cv.fr.pdf" target="_blank">CV</a>
-	      </nav>
-		<a href="http://gaspaio.github.io" class="title">Gaspaio (a.k.a. Rodolfo Ripado)</a>
-      </header>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="moreinfo">
+                  <li>
+                    <a href="http://www.linkedin.com/in/rodolforipado" target="_blank">
+                      <i class="fa fa-linkedin-square"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/gaspaio" target="_blank">
+                      <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/gaspaio" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                  <li class="cv"><a href="static/RodolfoRipado_CV_en.pdf"><strong>CV</strong></a></li>
+                </ul>
+            </div>
+        </div>
 
-	  <div class="wrapper">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Active Open-Source Projects</h2>
+            <ul class="item-list">
+              <li>
+                <h3><a href="https://github.com/radiofrance/node-forwarder-http">node-forwarder-http</a></h3>
+                <p>A simple forwarding library, to dispatch a single HTTP(S) request to a list of target servers. Sponsored by my current employer, Radio France. <span class="tek">#nodejs</span></p>
+              </li>
+              <li>
+                <h3><a href="https://gaspaio.github.io/operaprices">Opera Prices</a></h3>
+                <p>Scrapping the Paris Opera website to get the cheapest prices to every running Opera. Updated daily. <span class="tek">#python</span><span class="tek">#nodejs</span><span class="tek">#vuejs</span></p>
+              </li>
+              <li>
+                <h3><a href="https://github.com/gaspaio/logstash-tester">Logstash tester</a></h3>
+                <p>Unit-testing tool for Logstash configuration scripts.<span class="tek">#ruby</span><span class="tek">#logstash</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h2>Recent presentations</h2>
+            <ul class="item-list">
+              <li>
+                <h3><a href="static/201601_recommenderSystems.pdf">(toute petite) Introduction aux Systèmes de Recommandation</a></h3>
+                <p>The basics of Collaborative filtering and Content-based filtering, with examples in music.</p>
+              </li>
+              <li>
+                <h3><a href="prez/ab/ab.slides.html">Mieux faire parler les tests AB - Quelques outils de data-science pour améliorer les tests AB</a></h3>
+                <p>A very simple introduction to the statistics of AB testing: parameters, estimators and confidence intervals.</p>
+              </li>
+              <li>
+                <h3><a href="prez/evergreen/evergreen.slides.html">A la recherche d'Evergreen</a></h3>
+                <p>A study on the timeline of content at <a href="http://lemonde.fr">LeMonde</a>, to find the <em>Evergreen</em> posts.</p>
+              </li>
+              <li>
+                <h3><a href="/prez/dj/dj.slides.html">Compte rendu du Meetup Machine Learning 2014 HS#1 : le data-Journalisme</a></h3>
+                <p>An account of the presentations I saw at a <a href="http://www.meetup.com/paris-machine-learning-applications-group/">Machine Learning Meetup in Paris</a>, at Le Monde in early 2014. This was my first contact with <a href="http://www.syllabs.com/">Syllabs</a>, which went on to produce "robot-journalism" at Le Monde during the 2015 elections (cf. <a href="http://makingof.blog.lemonde.fr/2015/03/23/des-robots-au-monde-pendant-les-elections-departementales-oui-et-non/">Des robots au « Monde » pendant les élections départementales ? Oui… et non</a>).</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
 
-		  <div role="main" class="content">
-
-
-
-      <article>
-        <h1><a href="http://gaspaio.github.io/pib-elections.html">Presidents Vs the GDP</a></h1>
-        <p>Summary: Finding the correlation between GDP evolution and presidential election results</p>
-<p>I've recently been doing some reading on forecasting electoral results, and I came accross an article from <a href="http://liberation.fr">Libération</a> about vote functions applied to the 2002 french presidential elections. Yes, the same elections that ended up with an extreme-right party leader on the second round.</p>
-<p>The article, " <a href="http://www.liberation.fr/tribune/2002/03/21/pour-l-iowa-avantage-jospin_397638">Pour l'Iowa, avantage Jospin</a> ", was written by Michael S. Lewis-Beck and Christine Fauvelle-Aymar, two economists working on the Iowa forcasting algorithms back in the late 90's. The basic idea of those algorithms was using economic and political results to predict voting behaviours. In their Libération article, they apply some simple vote functions to try to predict the 2002 results.</p>
-<p>Anyway, early in the article they write that the correlation between the economic situation in France and presidential election results is around 0.7. I set off to try to reproduce these results. You can <a href="http://nbviewer.ipython.org/github/gaspaio/notebooks/blob/master/elections/PIB.ipynb">view the detailed notebook</a>, but here's a short version.</p>
-<p>The gross domestic product (PIB in french) is an easy indicator of the economic health of the country. <a href="http://www.bdm.insee.fr/bdm2/affichageSeries?idbank=001690224&amp;codeGroupe=1540">The official numbers from INSEE</a> are released quarterly :</p>
-<p><img alt="GDP in France since 1958" src="http://gaspaio.github.io/images/pib_pib.png" /></p>
-<p>To measure the economic situation of the country at a given time, we can take diffs and look at the PIB variations over time :</p>
-<p><img alt="GDP in France since 1958" src="http://gaspaio.github.io/images/pib_evol.png" /></p>
-<p>Predictive models that use economic information to forecast election results are based on the hypothesis that a given political color tends to be reelected if all goes well, economy-wise, and vice-versa. So, in theory, elections where there is a presidential color switch should be immediately preceded by periods where PIB variation is negative.</p>
-<p>After collecting the relevant election dates and results :</p>
-<p><img alt="GDP in France and Presidential elections" src="http://gaspaio.github.io/images/pib_evol_pres.png" /></p>
-<p>The blues area is the time where a France had a right wing president (from De Gaule to Sarkozy), and the pink areas indicates a left wing president (from Mitterrand to Holand). The white vertical lines are election dates.</p>
-<p>The <strong>Point-biserial correlation coefficient</strong> between PIB evolution sign and presidential color switches is : <span class="math">\(r_{pb} = -0.45\)</span>.</p>
-<p>So, indeed, correlation is negative : when PIB goes down, presidents tend to be ejected. This fact explains 45% of the variance in presidential election results.</p>
-<p>We can scatter-plot this relationship :</p>
-<p><img alt="GDP in France and Presidential elections" src="http://gaspaio.github.io/images/pib_evol_pres_scat.png" /></p>
-<p>Clearly, most elections with a negative of low PIB variation resulted in a presidential colour switch. On the other hand, the result if highly biased by what is called the "Trente glorieuses" (the thirty glorious years). From 1945 to 1975, french economy grew considerably (PIB variation &gt; 1% per quarter), with a stable right-wing gouvernment until the early eighties. This kind of growth is not likelly to come back anytime soon, so one should storngly question the predictive power of my little investigation.</p>
-<p>I still would like to known where Lewis-Beck and Christine Fauvelle-Aymar got the 70% correlation between economy and presidential election behaviour.</p>
-<p><strong>Resources :</strong></p>
-<ul>
-<li><a href="http://nbviewer.ipython.org/github/gaspaio/notebooks/blob/master/elections/PIB.ipynb">IPython Notebook</a></li>
-<li><a href="https://github.com/gaspaio/notebooks/tree/master/elections">IPython Notebook source</a></li>
-</ul>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    var location_protocol = (false) ? 'https' : document.location.protocol;
-    if (location_protocol !== 'http' && location_protocol !== 'https') location_protocol = 'https:';
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-      </article>
-
-      <hr />
-
-    
-
-
-
-		  </div>
-
-		  <div class="sidebar">
-		    <div class="sidebar-container" >
-
-	            <aside>
-	              <h2>Me</h2>
-			      <p>
-                    Web architecture, automation, python, nodejs, data science, machine learning.
-			      </p>
-			    </aside>
-
-  	          <nav>
-	            <h2>Categories</h2>
-	            <ul>
-	                <li ><a href="http://gaspaio.github.io/category/data-science.html">Data science</a></li>
-	            </ul>
-	          </nav>
-
-	            <aside>
-	            <h2>Social</h2>
-			      <ul class="social">
-				    <li><a href="http://www.linkedin.com/in/rodolforipado">LinkedIn</a><i></i></li>
-				    <li><a href="https://github.com/gaspaio">Github</a><i></i></li>
-				    <li><a href="https://twitter.com/gaspaio">Twitter</a><i></i></li>
-			      </ul>
-			    </aside>
-
-	        </div>
-		  </div>
-
-	  </div>
-
-      <footer>
-		<p role="contentinfo">
-		  Rodolfo Ripado - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
-    	</p>
-
-	  </footer>
-
-	</div>
-
-	  <script>
-		var _gaq=[['_setAccount','UA-69279501-1'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-	  </script>
-
+    <script>
+        var _gaq=[['_setAccount','UA-69279501-1'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
 </body>
 </html>

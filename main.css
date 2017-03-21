@@ -1,0 +1,35 @@
+body > div.container {
+  width: 970px !important;
+  padding-top: 100px;
+}
+
+.row-header {
+  text-align: center;
+}
+
+.row-header h1 {
+  font-size: 24px;
+}
+
+.row-header h3 {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0.2em 0;
+}
+
+ul.moreinfo {
+  text-align: center;
+  padding: 0.7em 0 0 0;
+  margin: 0;
+  font-size: 1.5em;
+}
+ul.moreinfo li {
+  display: inline;
+  list-tyle-type: none;
+  padding: 0 0.2em;
+}
+
+ul.moreinfo li.cv {
+  padding-left: 2em;
+  font-size: 0.8em
+}
