@@ -31,12 +31,7 @@ ul.moreinfo {
 ul.moreinfo li {
   display: inline;
   list-tyle-type: none;
-  padding: 0 0.2em;
-}
-
-ul.moreinfo li.cv {
-  padding-left: 2em;
-  font-size: 0.8em
+  padding: 0 0.8em;
 }
 
 span.tek {
