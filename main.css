@@ -34,6 +34,20 @@ ul.moreinfo li {
   padding: 0 0.8em;
 }
 
+ul.prez-list {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+ul.prez-list p {
+  margin: 0.2em 0;
+}
+
+ul.prez-list li {
+  margin-bottom: 15px;
+}
+
+
 span.tek {
   padding: 0 0.2em;
   font-weight: bold;
